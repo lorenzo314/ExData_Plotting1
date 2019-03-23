@@ -16,7 +16,7 @@ plot4 <- function(dt) {
 	plot(dt$Date, dt$Global_active_power,
 		t = "l", xlab = "", ylab = "Global Active Power")
 
-	plot(dt$Date, dt$Global_active_power,
+	plot(dt$Date, dt$Voltage,
 		t = "l", xlab = "datetime", ylab ="Voltage")
 
 	dt1<-select(dt, Date, Sub_metering_1)
@@ -32,7 +32,7 @@ plot4 <- function(dt) {
 	leg <- c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 	col <- c("black", "red", "blue")
 	legend("topright", legend = leg, col = col, lty = 1,
-		cex = 0.9, bty = "n")
+		cex = 1.0, bty = "n")
 
 	rm("dt1")
 	rm("dt2")
